@@ -35,7 +35,7 @@ namespace Infrastructure
         protected override void ConfigureApplicationContainer(ILifetimeScope existingContainer)
         {
             var builder = new ContainerBuilder();
-            _tasks.ForEach(task => task.Task.Invoke(builder));
+            _tasks.ForEach(task => task.Task(builder));
             builder.Update(existingContainer.ComponentRegistry);
             base.ConfigureApplicationContainer(existingContainer);
         }
