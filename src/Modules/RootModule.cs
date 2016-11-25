@@ -2,14 +2,11 @@
 
 namespace Modules
 {
-    public class RootModule:NancyModule
+    public class RootModule : NancyModule
     {
         public RootModule()
         {
-            Get["/"] = o =>
-            {
-                return Response.AsText("Hello world");
-            };
+            Get["/"] = o => Response.AsText("Hello world");
         }
     }
 }

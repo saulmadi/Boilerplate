@@ -2,9 +2,13 @@
 
 namespace Common
 {
-    public interface IEventHandler<in TEvent> where TEvent: class, IEvent
+    public interface IEventHandler
+    {
+        
+    }
+    public interface IEventHandler<in TEvent> : IEventHandler where TEvent: class, IEvent
     {
 
-        Task Handl(TEvent @event);
+        Task Handle(TEvent @event);
     }
 }

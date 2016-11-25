@@ -40,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandDispatcher.cs" />
     <Compile Include="CommandHandler.cs" />
+    <Compile Include="EvenDispatcher.cs" />
+    <Compile Include="TypeEqualityComparer.cs" />
     <Compile Include="ICommandHandler.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="ICommandDispatcher.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="IEvenDispatcher.cs" />
     <Compile Include="IEvent.cs" />
     <Compile Include="IEventHandler.cs" />
