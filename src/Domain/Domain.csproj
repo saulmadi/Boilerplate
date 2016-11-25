@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{844497D1-3C61-475B-BAB8-FA8CFF8227C3}</ProjectGuid>
+    <ProjectGuid>{0E4E670B-4E8B-4F68-9809-BE4A346F5536}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Modules</RootNamespace>
-    <AssemblyName>Modules</AssemblyName>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Nancy, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\Nancy.1.4.1\lib\net40\Nancy.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,27 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RootModule.cs" />
+    <Compile Include="Application\CommandHandlers\TestCreator.cs" />
+    <Compile Include="Application\Commands\CreateTest.cs" />
+    <Compile Include="DomainEvents\TestCreated.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\TestModule.cs" />
-    <Compile Include="Test\TestRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{A2EF71FF-C58E-4860-B67B-242990C0074C}</Project>
+      <Project>{a2ef71ff-c58e-4860-b67b-242990c0074c}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{0E4E670B-4E8B-4F68-9809-BE4A346F5536}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
-      <Project>{8cbe729c-255b-42bd-894e-386f5bdf273f}</Project>
-      <Name>Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
