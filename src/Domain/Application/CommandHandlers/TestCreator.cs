@@ -7,7 +7,7 @@ using Domain.Entities;
 
 namespace Domain.Application.CommandHandlers
 {
-    public class TestCreator : CommandHandler<CreateTest>, ICommandHandler
+    public class TestCreator : CommandHandler<CreateTest>
     {
         public override async Task Execute(CreateTest command)
         {
