@@ -13,7 +13,7 @@ namespace Modules.Test
             {
                 var request = this.Bind<TestRequest>();
 
-                await commandDispatcher.Disptach(new CreateTest(request.Name));
+                await commandDispatcher.Dispatch(new CreateTest(request.Name));
                 return null;
             };
         }

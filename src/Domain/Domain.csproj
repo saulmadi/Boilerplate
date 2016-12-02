@@ -40,16 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\CommandHandlers\PersonCreator.cs" />
+    <Compile Include="Application\CommandHandlers\PersonUpdater.cs" />
     <Compile Include="Application\CommandHandlers\TestCreator.cs" />
+    <Compile Include="Application\Commands\CreatePersona.cs" />
     <Compile Include="Application\Commands\CreateTest.cs" />
+    <Compile Include="Application\Commands\UpdatePersona.cs" />
     <Compile Include="DomainEvents\TestCreated.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Persona.cs" />
     <Compile Include="Entities\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{a2ef71ff-c58e-4860-b67b-242990c0074c}</Project>

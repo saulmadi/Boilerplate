@@ -14,7 +14,7 @@ namespace Common
             _commandHandlers = commandHandlers;
         }
 
-        public async Task Disptach<TCommand>(TCommand command) where TCommand : class, ICommand
+        public async Task Dispatch<TCommand>(TCommand command) where TCommand : class, ICommand
         {
             var commandType = command.GetType();
 

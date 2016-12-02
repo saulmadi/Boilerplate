@@ -1,10 +1,12 @@
 ﻿using System.Data.Entity;
-using Domain.Entities;
+using System.Threading.Tasks;
 
 namespace Data
 {
     public interface IAppDbContext
     {
-        DbSet<Test> Tests { get; set; }
+        Task SaveChanges();
+
+        DbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
 }
