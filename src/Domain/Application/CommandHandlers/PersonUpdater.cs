@@ -20,7 +20,7 @@ namespace Domain.Application.CommandHandlers
             persona.Nombre = command.Nombre;
             persona.Apellido = command.Apellido;
 
-            _repository.Update(persona);
+            await _repository.Update(persona);
         }
     }
 }

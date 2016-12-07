@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,13 +51,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="DatabaseContextFactory.cs" />
     <Compile Include="EntityNotFoundException.cs" />
     <Compile Include="EntityRepository.cs" />
     <Compile Include="IAppDbContext.cs" />
+    <Compile Include="Migrations\201612070404152_FirtDbCreation.cs" />
+    <Compile Include="Migrations\201612070404152_FirtDbCreation.Designer.cs">
+      <DependentUpon>201612070404152_FirtDbCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +77,11 @@
       <Project>{0E4E670B-4E8B-4F68-9809-BE4A346F5536}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612070404152_FirtDbCreation.resx">
+      <DependentUpon>201612070404152_FirtDbCreation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

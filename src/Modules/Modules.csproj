@@ -48,8 +48,6 @@
     <Compile Include="Persona\PersonRequest.cs" />
     <Compile Include="RootModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\TestModule.cs" />
-    <Compile Include="Test\TestRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
