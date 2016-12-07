@@ -4,6 +4,10 @@ namespace Domain.Entities
 {
     public class Persona : Entity
     {
+        protected Persona()
+        {
+            
+        }
         public Persona(Guid id, string nombre, string apellido)
         {
             Nombre = nombre;
